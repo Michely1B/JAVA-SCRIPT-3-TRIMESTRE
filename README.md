@@ -50,94 +50,23 @@
     <script src="main.js"> </script>
 </body>
 </html>
-    <h1>Alura Midi</h1>
-
-    <section class="teclado">
-        <button class="tecla tecla_pom">Pom</button>
-        <button class="tecla tecla_clap">Clap</button>
-        <button class="tecla tecla_tim">Tim</button>
-
-        <button class="tecla tecla_puff">Puff</button>
-        <button class="tecla tecla_splash">Splash</button>
-        <button class="tecla tecla_toim">Toim</button>
-
-        <button class="tecla tecla_psh">Psh</button>
-        <button class="tecla tecla_tic">Tic</button>
-        <button class="tecla tecla_tom">Tom</button>
-    </section>
-
-    <audio src="sounds/keyq.wav" id="som_tecla_pom"></audio>
-    <audio src="sounds/keyw.wav" id="som_tecla_clap"></audio>
-    <audio src="sounds/keye.wav" id="som_tecla_tim"></audio>
-    <audio src="sounds/keya.wav" id="som_tecla_puff"></audio>
-    <audio src="sounds/keys.wav" id="som_tecla_splash"></audio>
-    <audio src="sounds/keyd.wav" id="som_tecla_toim"></audio>
-    <audio src="sounds/keyz.wav" id="som_tecla_psh"></audio>
-    <audio src="sounds/keyx.wav" id="som_tecla_tic"></audio>
-    <audio src="sounds/keyc.wav" id="som_tecla_tom"></audio>
-
-</body>
-</html>
-
 ##MAIN.JS
-function TocaSomPom () {
-    document.querySelector('#som_tecla_pom').play();
+// Pom ---------------------------------------
+
+function TocaSomPom () { 
+    document.querySelector('#som_tecla_pom').play(); 
 }
 
-document.querySelector('.tecla_pom').onclick = TocaSomPom;
+const ListaDeTeclas = document.querySelectorAll('.tecla');
 
+let contador = 0;
 
+//enquanto
+while (contador < ListaDeTeclas.length) {
+    ListaDeTeclas[contador].onclick = TocaSomPom;
 
+    contador = contador + 1;
 
-function TocaSomClap () {
-    document.querySelector('#som_tecla_clap_').play();
+    console.log(contador);
 }
-
-document.querySelector('.tecla_tim').onclick = TocaSomTim;
-
-
-
-
-function TocaSomTim () {
-   document.querySelector('#som_tecla_tim_').play();
- }
-
-document.querySelector('.tecla_tim').onclick = TocaSomTim;
-
-
-
-
-function TocaSomClap () {
-    document.querySelector('#som_tecla_Puff_').play();
- }
-
-document.querySelector('.tecla_Puff').onclick = TocaSomPuff;
-
-
-
-
- function TocaSomClap () {
-        document.querySelector('#som_tecla_clap_').play();
-  }
-
-document.querySelector('.tecla_clap').onclick = TocaSomClap;
-
-
-
-
-function TocaSomClap () {
-    document.querySelector('#som_tecla_clap_').play();
-}
-
-document.querySelector('.tecla_clap').onclick = TocaSomClap;
-
-
-
-
-function TocaSomClap () {
-    document.querySelector('#som_tecla_clap_').play();
-}
-
-document.querySelector('.tecla_clap').onclick = TocaSomClap;
-
 
