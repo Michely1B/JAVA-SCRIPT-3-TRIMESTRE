@@ -51,22 +51,21 @@
 </body>
 </html>
 ##MAIN.JS
-// Pom ---------------------------------------
-
-function TocaSomPom () { 
-    document.querySelector('#som_tecla_pom').play(); 
+function TocaSom (idElementoAudio) { 
+    document.querySelector(idElementoAudio).play(); 
 }
 
 const ListaDeTeclas = document.querySelectorAll('.tecla');
 
 let contador = 0;
 
-//enquanto
-while (contador < ListaDeTeclas.length) {
-    ListaDeTeclas[contador].onclick = TocaSomPom;
+//enquanto 
+while (contador < ListaDeTeclas.length) { 
+    
+    ListaDeTeclas[contador].onclick = TocaSom;
 
     contador = contador + 1;
 
     console.log(contador);
-}
 
+}
